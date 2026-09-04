@@ -32,7 +32,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
     collapsedIds,
     resetToBlank,
     loadSample,
-    stats,
   } = useCurriculum();
 
   const scrollToModule = (moduleId: string) => {
