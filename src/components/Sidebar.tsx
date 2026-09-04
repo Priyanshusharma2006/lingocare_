@@ -16,7 +16,6 @@ interface SidebarProps {
   isOpen: boolean;
   onToggle: () => void;
   onOpenUpload: () => void;
-  onOpenApiKey?: () => void;
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
@@ -218,18 +217,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           </div>
         </div>
 
-        {/* Footer: Stats & Save Indicator */}
-        <div className="p-3 border-t border-stone-800/80 bg-[#14110F]">
-          <div className="flex items-center justify-between text-[11px] text-stone-500 px-1">
-            <span className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-              Auto-saved
-            </span>
-            <span className="font-mono text-stone-500">
-              {stats.moduleCount}m · {stats.topicCount}t · {stats.lessonCount}l
-            </span>
-          </div>
-        </div>
+
       </div>
     </aside>
   </>

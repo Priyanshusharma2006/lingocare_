@@ -16,7 +16,6 @@ import {
 
 interface CurriculumHeaderProps {
   onOpenUpload: () => void;
-  onOpenApiKey?: () => void;
 }
 
 export const CurriculumHeader: React.FC<CurriculumHeaderProps> = ({

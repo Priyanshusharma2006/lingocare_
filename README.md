@@ -21,7 +21,7 @@ A modern, intuitive, and responsive **4-tier Curriculum Creation Engine** built 
 * **One-Click Syllabus Extraction**: Upload unstructured or structured course PDFs to extract the full 4-tier tree.
 * **Multi-Stage Progress Indicators**: Real-time visual progress tracker (*Reading PDF → Analyzing Structure → Generating Hierarchy*).
 * **Context Inference**: Automatically infers missing topics and lessons when documents have loose formatting.
-* **Dual Execution**: Uses Google's `@google/genai` SDK (`gemini-2.5-flash`) with strict structured JSON schema output and client-side fallback.
+* **Dual Execution**: Uses Google's `@google/genai` SDK (`gemini-3.6-flash`) with strict structured JSON schema output and client-side fallback.
 
 ### 4. 🗂️ Responsive Collapsible Sidebar
 * **Lingocare Dark Theme**: Sleek `#191512` background with `#EC8601` brand accents.
@@ -64,7 +64,7 @@ lingocare_assigned_task/
 │   │   ├── curriculumContextDef.ts # Context definition and shared interfaces
 │   │   └── useCurriculum.ts        # Custom React hook for consuming curriculum state
 │   ├── services/
-│   │   └── aiService.ts            # Gemini 2.5 Flash client & schema definitions
+│   │   └── aiService.ts            # Gemini 3.6 Flash client & schema definitions
 │   ├── App.tsx                     # Main layout & modal controller
 │   ├── index.css                   # Tailwind CSS v4 design tokens and utilities
 │   ├── main.tsx                    # React application entry point
@@ -184,6 +184,6 @@ GEMINI_API_KEY=your_gemini_api_key_here
 * **Build Tool**: [Vite 8](https://vitejs.dev/)
 * **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
 * **Icons**: [Lucide React](https://lucide.dev/)
-* **AI Integration**: [@google/genai](https://www.npmjs.com/package/@google/genai) (`gemini-2.5-flash`)
+* **AI Integration**: [@google/genai](https://www.npmjs.com/package/@google/genai) (`gemini-3.6-flash`)
 * **Linter**: [Oxlint](https://oxc.rs/)
 * **Utilities**: `clsx`, `tailwind-merge`

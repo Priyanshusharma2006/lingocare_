@@ -143,14 +143,14 @@ export async function parsePdfCurriculum(
 
     onProgress?.({
       step: 'analyzing',
-      message: 'Analyzing layout, tables & modules using gemini-2.5-flash...',
+      message: 'Analyzing layout, tables & modules using gemini-3.6-flash...',
       percentage: 55,
     });
 
     const ai = new GoogleGenAI({ apiKey });
 
     const aiResponse = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3.6-flash',
       contents: [
         {
           role: 'user',

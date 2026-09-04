@@ -15,13 +15,11 @@ import { useCurriculum } from '../context/useCurriculum';
 interface PdfUploadModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onOpenApiKeyModal: () => void;
 }
 
 export const PdfUploadModal: React.FC<PdfUploadModalProps> = ({
   isOpen,
   onClose,
-  onOpenApiKeyModal,
 }) => {
   const { setCurriculumTree } = useCurriculum();
   const [isDragging, setIsDragging] = useState(false);
@@ -206,22 +204,13 @@ export const PdfUploadModal: React.FC<PdfUploadModalProps> = ({
                   <div className="flex-1">
                     <p className="font-semibold">Extraction Failed</p>
                     <p className="text-rose-700 mt-0.5">{errorMsg}</p>
-                    {errorMsg.includes('API key') && (
-                      <button
-                        type="button"
-                        onClick={onOpenApiKeyModal}
-                        className="mt-2 inline-flex items-center gap-1 font-semibold text-[#EC8601] underline hover:text-[#D97706]"
-                      >
-                        Enter API Key Now →
-                      </button>
-                    )}
                   </div>
                 </div>
               )}
 
               {/* Specs pill note */}
               <div className="text-[11px] text-slate-400 flex items-center justify-between border-t border-slate-100 pt-3">
-                <span>⚡ Powered by Google Gemini 2.5 Flash</span>
+                <span>⚡ Powered by Google Gemini 3.6 Flash</span>
                 <span>Max size: 20MB</span>
               </div>
             </>
