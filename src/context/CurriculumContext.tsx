@@ -229,9 +229,15 @@ export const CurriculumProvider: React.FC<{ children: React.ReactNode }> = ({ ch
 
   const loadSample = useCallback(() => {
     const snapshot = pushUndoSnapshot('Load Sample');
-    setCurriculum(sanitizeCurriculumTree(SAMPLE_CURRICULUM));
-    setCollapsedIds(new Set());
-    addToast('Loaded Spanish B1 sample curriculum', 'success', snapshot);
+    const tree = sanitizeCurriculumTree(SAMPLE_CURRICULUM);
+    setCurriculum(tree);
+    // Keep Module 1 open, collapse modules 2..N for clean initial display (§4 & §5)
+    const autoCollapsed = new Set<string>();
+    tree.modules.forEach((m, idx) => {
+      if (idx > 0) autoCollapsed.add(m.id);
+    });
+    setCollapsedIds(autoCollapsed);
+    addToast('Loaded Spanish B2 full curriculum sample', 'success', snapshot);
   }, [pushUndoSnapshot, addToast]);
 
   // Module CRUD

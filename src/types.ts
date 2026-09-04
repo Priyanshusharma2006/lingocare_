@@ -132,43 +132,54 @@ export function sanitizeCurriculumTree(data: Partial<Curriculum>): Curriculum {
 
 /**
  * Rich sample curriculum for testing and immediate demo
+ * Demonstrates the full 4-tier hierarchy scale (4 modules, 8 topics, 18 lessons)
  */
 export const SAMPLE_CURRICULUM: Curriculum = {
   id: generateId(),
-  title: 'Spanish B1: Intermediate Conversational Mastery',
-  description: 'A comprehensive curriculum designed to bridge grammatical foundations into fluid, spontaneous conversation across real-world scenarios.',
+  title: 'Spanish B2: Professional & Conversational Mastery',
+  description: 'A comprehensive curriculum bridging conversational spontaneity, advanced grammatical precision, and workplace negotiation in Spanish.',
   modules: [
     {
       id: generateId(),
-      title: 'Narrative Tenses & Storytelling',
-      description: 'Mastering the nuanced distinction between Pretérito Indefinido and Pretérito Imperfecto in personal anecdotes.',
+      title: 'Narrative Mastery & Complex Past',
+      description: 'Mastering nuanced temporal sequences, flashbacks, and narrative rhythm in storytelling.',
       topics: [
         {
           id: generateId(),
-          title: 'Preterite vs. Imperfect Dynamics',
-          description: 'Understanding completed actions versus habitual actions and background context.',
+          title: 'Past Tense Contrast & Aspectual Shifts',
+          description: 'Differentiating Pretérito Indefinido, Imperfecto, and Pluscuamperfecto in dynamic discourse.',
           lessons: [
             {
               id: generateId(),
-              title: 'Trigger Words & Temporal Markers',
-              description: 'Identifying key time markers like "ayer", "mientras", and "de repente".',
+              title: 'Trigger Words & Aspectual Nuances (Quise vs Quería, Supe vs Sabía)',
+              description: 'Analyzing how verb meanings shift based on aspectual choice.',
             },
             {
               id: generateId(),
-              title: 'Telling Childhood Stories & Memories',
-              description: 'Constructing narrative paragraphs blending habitual past and sudden plot events.',
+              title: 'Narrative Rhythm: Foregrounding Events vs Background Framing',
+              description: 'Constructing layered paragraphs blending habitual backdrop and pivotal plot events.',
+            },
+            {
+              id: generateId(),
+              title: 'Childhood Memories & Autobiographical Storytelling',
+              description: 'Fluidly sharing personal anecdotes and historical milestones.',
             },
           ],
         },
         {
           id: generateId(),
-          title: 'The Past Perfect (Pretérito Pluscuamperfecto)',
-          description: 'Expressing actions that occurred before another past milestone.',
+          title: 'Reported Speech in Past Contexts',
+          description: 'Transposing direct quotes into indirect past reported speech with accurate tense shifts.',
           lessons: [
             {
               id: generateId(),
-              title: 'Forming Haber in the Imperfect',
-              description: 'Conjugating había + participio pasado with irregular participles.',
+              title: 'Backshifting Tenses (Dijo que vendría / había venido)',
+              description: 'Rules for shifting present and future statements into past perspectives.',
+            },
+            {
+              id: generateId(),
+              title: 'Reporting Questions, Commands & Doubts (Me preguntó si...)',
+              description: 'Transforming imperative commands into subjunctive reported structures.',
             },
           ],
         },
@@ -176,23 +187,132 @@ export const SAMPLE_CURRICULUM: Curriculum = {
     },
     {
       id: generateId(),
-      title: 'The Subjunctive in Everyday Discourse',
-      description: 'Expressing doubts, emotions, desires, and hypothetical situations with confidence.',
+      title: 'The Subjunctive in Nuanced Discourse',
+      description: 'Expressing hypothetical scenarios, emotional stances, and concessions with confidence.',
       topics: [
         {
           id: generateId(),
-          title: 'W-E-I-R-D-O Triggers & Present Subjunctive',
-          description: 'Forming and applying subjunctive moods triggered by wishes, doubts, and emotions.',
+          title: 'Imperfect Subjunctive & Conditional Structures',
+          description: 'Navigating hypothetical "si" clauses and counterfactual reflections.',
           lessons: [
             {
               id: generateId(),
-              title: 'Regular and Irregular Subjunctive Conjugations',
-              description: 'Navigating stem changers (tenga, pueda, vaya, sepa) and opposite vowel endings.',
+              title: 'Conjugating the Imperfect Subjunctive (-ra and -se endings)',
+              description: 'Mastering regular and irregular 3rd-person preterite root derivations.',
             },
             {
               id: generateId(),
-              title: 'Giving Subtle Advice & Recommendations',
-              description: 'Using "Te recomiendo que...", "Es importante que...", and "Dudo que...".',
+              title: 'Hypothetical Conditions: "Si tuviera tiempo, viajaría"',
+              description: 'Constructing improbable present and future conditional structures.',
+            },
+            {
+              id: generateId(),
+              title: 'Past Counterfactuals & Regrets: "Si hubiera sabido..."',
+              description: 'Expressing unfulfilled past outcomes using Pluscuamperfecto de Subjuntivo.',
+            },
+          ],
+        },
+        {
+          id: generateId(),
+          title: 'Concessive & Temporal Triggers',
+          description: 'Using "aunque", "a pesar de que", and "en cuanto" with Indicative vs Subjunctive.',
+          lessons: [
+            {
+              id: generateId(),
+              title: 'Concession Dynamics: "Aunque llueva" vs "Aunque llueve"',
+              description: 'Distinguishing between known facts and hypothetical concessions.',
+            },
+            {
+              id: generateId(),
+              title: 'Future Temporal Connectors: "Tan pronto como llegue"',
+              description: 'Applying subjunctive rules after prospective time conjunctions.',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: generateId(),
+      title: 'Business Spanish & Professional Negotiations',
+      description: 'Formal workplace interactions, executive communication, and diplomatic objection handling.',
+      topics: [
+        {
+          id: generateId(),
+          title: 'Professional Correspondence & Meeting Leadership',
+          description: 'Structuring executive emails, proposals, and leading cross-functional discussions.',
+          lessons: [
+            {
+              id: generateId(),
+              title: 'Formal Register: Executive Salutations & Courtesy Formulas',
+              description: 'Crafting polished formal communications using "Por medio de la presente...".',
+            },
+            {
+              id: generateId(),
+              title: 'Leading Agendas & Facilitating Team Discussions',
+              description: 'Guiding meeting agendas, opening floor questions, and synthesizing action items.',
+            },
+            {
+              id: generateId(),
+              title: 'Pitching Value Propositions & Product Presentations',
+              description: 'Structuring persuasive commercial pitches with rhetorical clarity.',
+            },
+          ],
+        },
+        {
+          id: generateId(),
+          title: 'Persuasion & Diplomatic Disagreement',
+          description: 'Polite dissent, counter-proposals, and closing agreements.',
+          lessons: [
+            {
+              id: generateId(),
+              title: 'Softening Dissent: "Entiendo su punto, sin embargo..."',
+              description: 'Using diplomatic hedging and tactful counterpoints in high-stakes negotiations.',
+            },
+            {
+              id: generateId(),
+              title: 'Price Negotiation & Concession Trading Strategies',
+              description: 'Navigating contractual terms, volume discounts, and mutually beneficial compromises.',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: generateId(),
+      title: 'Idiomatic Nuance & Cultural Colloquialisms',
+      description: 'Understanding regional slang, humor, metaphors, and native speech cadences.',
+      topics: [
+        {
+          id: generateId(),
+          title: 'High-Frequency Idioms & Proverbs',
+          description: 'Contextual usage of popular proverbs and figurative expressions.',
+          lessons: [
+            {
+              id: generateId(),
+              title: 'Everyday Metaphors ("Dar en el clavo", "Estar en las nubes")',
+              description: 'Deciphering common conversational idioms and their cultural origins.',
+            },
+            {
+              id: generateId(),
+              title: 'Body-Part Idioms ("Costar un ojo de la cara", "Tomar el pelo")',
+              description: 'Mastering expressive conversational phrases used in daily social exchanges.',
+            },
+          ],
+        },
+        {
+          id: generateId(),
+          title: 'Regional Variations (Spain vs Latin America)',
+          description: 'Key lexical and syntactic differences across major Spanish-speaking regions.',
+          lessons: [
+            {
+              id: generateId(),
+              title: 'Lexical Splits: Peninsular vs Latin American Terminology',
+              description: 'Navigating vocabulary differences (coche/carro, ordenador/computadora).',
+            },
+            {
+              id: generateId(),
+              title: 'Voseo & Pronoun Dynamics in the Southern Cone & Central America',
+              description: 'Understanding vos conjugations, direct/indirect clitic placements, and regional identity.',
             },
           ],
         },
